@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function setIframe() {
+            var selection = document.getElementById("fig_select").value;
+            document.getElementById("figure-display").src = selection
+        }
+    </script>  
+</head>
+
+<body>
+    <br>
+    <div class="text-section">
+        <b>A reduction in neonatal deaths</b>
+        <p>
+            80 deaths of children and young people were recorded in 2019 in South Australia. This is the smallest number of deaths recorded since the Child Death and Serious Injury Committee was formed in 2005. 
+            The Committee is interested in whether this drop was a result of chance, or whether something – for example, a medical advance – has reduced the number of children and young people dying. 
+        </p>
+        <p>
+            This, of course, is likely a very complex question, and we do not aim to answer it here. However, we can examine certain possibilities.
+        </p>
+        <p>
+            Firstly, we were interested in whether the reduction in deaths was concentrated in a certain age group. Figure 1 shows that, although there were small reductions in deaths in most age groups in 2019, the largest reduction was seen in neonates (infants < 28 days old). 
+            This change can be seen more directly in Figure 2, in which the number of deaths in each age group in 2019 is compared to the average number of deaths in that age group over the previous 5 years (2014–2018). 
+            In 2019, 14 fewer neonates died than in previous years, a reduction of 38%. While possible, a reduction of this magnitude occurring by chance is unlikely, so it raises the possibility that there is some systematic cause for the reduction in neonatal deaths.
+        </p>
+        <br>
+    </div>
+
+    <div class="row">
+        <div id="dropdown" class="col-12">
+            <div>
+                <label for="fig_select"><strong style="font-size: 1em;">Select figure:</strong></label><br>
+                <select id="fig_select" class="form-control" style="width: 100%" onchange="setIframe()">
+                    <option value="figure1.html">Deaths by age group</option>
+                    <option value="figure2.html">Reduced neonatal deaths in 2019</option>
+                    <option value="figure3.html">Live births and neonatal death rate</option>
+                    <option value="figure4.html">Neonatal deaths by ICD-10 block</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container">
+            <iframe class="responsive-iframe" src="figure1.html" id="figure-display"></iframe>
+        </div>
+    </div>
+
+        
+    <div class="text-section">
+        <br>
+        <b>Live births</b>
+        <p>
+            One rather simple question that arises is: Were less babies born in 2019? The simple answer: no. In Figure 3 (top), one can see the yearly number of live births. Although there has been a slight downward trend since 2014, the reduction in births from 2018 to 2019 was less than 1%. 
+            Clearly, then, fewer neonatal deaths cannot be attributed to fewer births, as confirmed by the drop in the neonatal death rate, also in Figure 3 (bottom). 
+        </p>
+        <br>
+
+        <b>Causes of neonatal deaths</b>
+        <p>
+            Knowing that neonates died at a lower rate in 2019, the Committee asked whether a certain cause or category of death had been reduced. 
+            If there was a uniform reduction in deaths across different causes, one might conclude that chance was responsible; conversely, if neonates were dying less from a specific cause, this might provide evidence for a positive advance in neonatal survival of disease.
+        </p>
+        <p>
+            The Committee assigns codes to each death according to the International Statistical Classification of Diseases and Related Health Problems (ICD-10). These codes are arranged into chapters and blocks (groups of related codes within a chapter). 
+            In about 95% of neonatal deaths, the underlying cause of death code falls under chapters 16 or 17, which combined contain hundreds of codes and subcodes. Thus, to examine possible changes in 2019, cases were aggregated based on the blocks to which their codes belonged.
+        </p>
+        <p>
+            Figure 4 shows the number of deaths assigned to the most common code blocks in 2019 and the average yearly number for each block over the previous 5 years. Strikingly, in 2019, there were no deaths attributed to ‘Disorders related to length of gestation and fetal growth’ (block P05-P08). 
+            In previous years, these codes represented the second most common causes of death, accounting for an average of 7 deaths per year. It appears that these deaths haven’t been ‘pushed’ into other blocks, since there were no increases in the number of deaths in other blocks in 2019, besides a small jump in block P00-P04. 
+            And indeed, as we already know, the total number of neonatal deaths was significantly lower. 
+        </p>
+        <p>
+            Does this mean that there has been a systematic reduction in the deaths of infants who experience adverse gestation or fetal growth? Are neonates surviving these complications at a greater rate? 
+            At this stage, we do not know, but we hope that these data are useful to those working in the health system, and we keenly anticipate analysing the 2020 data to determine whether this trend continues.
+        </p>
+        <br>
+    </div>
+</body>
+
+
+
+
+
+</html>
