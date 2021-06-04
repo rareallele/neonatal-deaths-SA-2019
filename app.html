@@ -4,29 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        function setIframe() {
-            var selection = document.getElementById("fig_select").value;
-            document.getElementById("figure-display").src = selection
-        }
-    </script>  
+    <script src="scripts/script.js"></script> 
 </head>
 
 <body>
     <br>
     <div class="text-section">
-        <b>A reduction in neonatal deaths</b>
+        <h4>A reduction in neonatal deaths</h4>
         <p>
             80 deaths of children and young people were recorded in 2019 in South Australia. This is the smallest number of deaths recorded since the Child Death and Serious Injury Committee was formed in 2005. 
             The Committee is interested in whether this drop was a result of chance, or whether something – for example, a medical advance – has reduced the number of children and young people dying. 
         </p>
         <p>
-            This, of course, is a very complex question, and we do not aim to answer it here. However, we can examine certain possibilities.
+            This, of course, is likely a very complex question, and we do not aim to answer it here. However, we can examine certain possibilities.
         </p>
         <p>
             Firstly, we were interested in whether the reduction in deaths was concentrated in a certain age group. Figure 1 shows that, although there were small reductions in deaths in most age groups in 2019, the largest reduction was seen in neonates (infants < 28 days old). 
             This change can be seen more directly in Figure 2, in which the number of deaths in each age group in 2019 is compared to the average number of deaths in that age group over the previous 5 years (2014–2018). 
-            In 2019, 14 fewer neonates died than in previous years, a reduction of 38%. While it is possible, a change of this magnitude occurring by chance is unlikely, so it raises the possibility that there is some systematic cause for the reduction in neonatal deaths.
+            In 2019, 14 fewer neonates died than in previous years, a reduction of 38%. While possible, a reduction of this magnitude occurring by chance is unlikely, so it raises the possibility that there is some systematic cause for the reduction in neonatal deaths.
         </p>
         <br>
     </div>
@@ -52,25 +47,25 @@
         
     <div class="text-section">
         <br>
-        <b>Live births</b>
+        <h4>Live births</h4>
         <p>
-            One rather simple question that arises is: Were less babies born in 2019? The simple answer: no. In Figure 3 (top), one can see the yearly number of live births. Although there has been a slight downward trend since 2014, the reduction in births from 2018 to 2019 was less than 1%. 
-            Clearly, then, fewer neonatal deaths cannot be attributed to fewer births, as confirmed by the drop in the neonatal death rate, seen at the bottom of Figure 3. 
+            One rather simple question that arises is: were less babies born in 2019? The simple answer: no. In Figure 3 (top), one can see the yearly number of live births. Although there has been a slight downward trend since 2014, the reduction in births from 2018 to 2019 was less than 1%. 
+            Clearly, then, fewer neonatal deaths cannot be attributed to fewer births, as confirmed by the drop in the neonatal death rate, also in Figure 3 (bottom). 
         </p>
         <br>
 
-        <b>Causes of neonatal deaths</b>
+        <h4>Causes of neonatal deaths</h4>
         <p>
             Knowing that neonates died at a lower rate in 2019, the Committee asked whether a certain cause or category of death had been reduced. 
-            If there was a uniform reduction in deaths across different causes, one might conclude that chance was responsible; conversely, if neonates were dying from a specific cause less frequently, this might provide evidence for a positive advance in neonatal survival.
+            If there was a uniform reduction in deaths across different causes, one might conclude that chance was responsible; conversely, if neonates were dying less from a specific cause, this might provide evidence for a positive advance in neonatal survival of disease.
         </p>
         <p>
-            The Committee assigns codes to each death according to the International Statistical Classification of Diseases and Related Health Problems (ICD-10). These codes are arranged into chapters and blocks (groups of related codes within a chapter). 
-            In about 95% of neonatal deaths, the underlying cause of death code falls under chapters 16 or 17, which combined contain hundreds of codes and subcodes. Thus, to examine possible changes in 2019, cases were aggregated based on the blocks to which their codes belong.
+            The Committee assigns codes to each death according to the International Statistical Classification of Diseases and Related Health Problems (<a href="https://www.who.int/standards/classifications/classification-of-diseases" target="_blank">ICD-10</a>). These codes are arranged into chapters and blocks (groups of related codes within a chapter). 
+            In about 95% of neonatal deaths, the underlying cause of death code falls under chapters 16 or 17, which combined contain hundreds of codes and subcodes. Thus, to examine possible changes in 2019, cases were aggregated based on the blocks to which their codes belonged.
         </p>
         <p>
-            Figure 4 shows the number of deaths assigned to the most common code blocks in 2019 and the average yearly number for each block over the previous 5 years. Strikingly, in 2019, there were no deaths attributed to ‘Disorders related to length of gestation and fetal growth’ (block P05-P08). 
-            In previous years, these codes represented the second most common causes of death, accounting for an average of 7 deaths per year. These deaths don't appear to have been ‘pushed’ into other blocks, since there were no increases in the number of deaths in other blocks in 2019, besides a small jump in block P00-P04. 
+            Figure 4 shows the number of deaths assigned to the most common code blocks in 2019 and the average yearly number for each block over the previous 5 years. Strikingly, in 2019, there were no deaths attributed to ‘Disorders related to length of gestation and fetal growth’ (<a href="https://icd.who.int/browse10/2019/en#/P05-P08" target="_blank">block P05-P08</a>). 
+            In previous years, these codes represented the second most common causes of death, accounting for an average of 7 deaths per year. It appears that these deaths haven’t been ‘pushed’ into other blocks, since there were no increases in the number of deaths in other blocks in 2019, besides a small jump in block P00-P04. 
             And indeed, as we already know, the total number of neonatal deaths was significantly lower. 
         </p>
         <p>
@@ -78,6 +73,24 @@
             At this stage, we do not know, but we hope that these data are useful to those working in the health system, and we keenly anticipate analysing the 2020 data to determine whether this trend continues.
         </p>
         <br>
+        <button type="button" class="accordion" onclick="openPanel()">
+            <b>Footnote: how to interpret the data</b>
+        </button>
+        <div id="panel">
+            <p>
+                Neonatal deaths are almost always assigned codes belonging to chapters 16 or 17. <a href="https://icd.who.int/browse10/2019/en#/XVI">Chapter 16</a> describes ‘Certain conditions originating in the perinatal period’, while <a href="https://icd.who.int/browse10/2019/en#/XVII">Chapter 17</a> describes ‘Congenital malformations, deformations and chromosomal abnormalities’. 
+                It is important to note that deaths are not uniformly distributed amongst the many codes in these chapters: most deaths are assigned one of a relatively small subset of codes describing the most common disorders. Nevertheless, our data describe 606 neonates, so many specific codes are present. 
+                Thus, to perform quantitative analyses, it is necessary to aggregate the data into a structure broader than individual codes but narrower than chapters. Code blocks serve just this purpose, and are useful also in interpreting the data, as they describe distinct types of conditions and causes of death, including ‘Fetus and newborn affected by maternal factors and by complications of pregnancy, labour and delivery’ (<a href="https://icd.who.int/browse10/2019/en#/P00-P04">block P00-P04</a>) and ‘Disorders related to length of gestation and fetal growth’ (<a href="https://icd.who.int/browse10/2019/en#/P05-P08">block P05-P08</a>). 
+                Within block P00-P04, most deaths are attributed to just a handful of codes, with the most common being <a href="https://icd.who.int/browse10/2019/en#/P02">P02.7</a> (Fetus and newborn affected by chorioamnionitis) and <a href="https://icd.who.int/browse10/2019/en#/P02">P02.1</a> (Fetus and newborn affected by other forms of placental separation and haemorrhage). In block P05-P08, the majority of deaths are assigned codes <a href="https://icd.who.int/browse10/2019/en#/P07">P07.0</a> (Extremely low birth weight) or <a href="https://icd.who.int/browse10/2019/en#/P07">P07.2</a> (Extreme immaturity). 
+                The blocks presented in Figure 4 are those with an average yearly count of at least 1. Thus, while other blocks are present in the data, they occur very rarely and were not expected to be observed in 2019.
+            </p>
+            <p>
+                Note that more detailed information, including actual counts, can be found by hovering over (or tapping on) components of the graphs. In Figure 4 these actions will reveal the descriptions of each code block presented.
+            </p>
+            <br>
+        </div>
+        
+        <br><br><br><br>
     </div>
 </body>
 
